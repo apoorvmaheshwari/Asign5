@@ -1,0 +1,11 @@
+<div class="container-fluid">
+    <label>Name:{{name}}</label>
+    <label>Author:{{author}}</label>
+    <label>Price:{{price}}</label>
+    <hr>
+    <br>
+    <div *ngFor="let comment of comments">
+        {{comment.name}}<br> {{comment.comment}}
+    </div>
+
+</div>

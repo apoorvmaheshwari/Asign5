@@ -1,0 +1,27 @@
+  
+<div class="container">
+        <table class="table table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Title</th>
+              <th scope="col">Author</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody *ngIf="books.length > 0">
+            <tr *ngFor="let b of books">
+              <th scope="row">{{b.id}}</th>
+              <td> {{b.title}} </td>
+              <td> {{b.author}} </td>
+              <td> {{b.price}} </td>
+            <td>
+           <a routerLink="/edit/{{b.id}}" class="btn btn-dark">Edit</a>
+           <a routerLink="/comment/{{b.id}}" class="btn btn-success">Comment</a>
+           <a routerLink="/view/{{b.id}}" class="btn btn-danger">View Comments</a>
+           </td>
+           </tr>
+            
+          </tbody>
+        </table>
+      </div>
